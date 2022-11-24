@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear"
+    android:background="#696969">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:layout_boxedEdges="all">
+
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:format12Hour="hh:mm:ss"
+            android:layout_gravity="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="-4dp"
+            android:onClick="Clicked"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <ListView
+            android:id="@+id/dishesList"
+            style="@style/CustomListView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="5dp"
+            android:background="#696969"
+            android:divider="#696969"
+            android:dividerHeight="@dimen/ntwodp">
+
+        </ListView>
+
+
+
+
+
+    </FrameLayout>
+
+</androidx.wear.widget.BoxInsetLayout>
